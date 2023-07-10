@@ -1,15 +1,14 @@
 import React from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 export const Menu = () => {
   return (
     <nav className="menu">
-      <a href="index.html" className="active">
-        Home
-      </a>
-      <a href="reviews.html">Reviews</a>
-      <a href="articles.html">Articles</a>
-      <a href="movies.html">Movies</a>
+      <Link to="/home">Home</Link>
+      <Link to="/reviews">Reviews</Link>
+      <Link to="/articles">Articles</Link>
+      <Link to="/movies">Movies</Link>
     </nav>
   );
 };

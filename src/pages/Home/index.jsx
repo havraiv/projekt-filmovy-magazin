@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Home = () => {
   return (
-    <div class="home">
+    <div className="home">
       <h1>Movie magazine</h1>
       <p>
         Welcome to our website about movies! Here you will find the latest news

@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 import { Menu } from './components/Menu';
 import { Home } from './pages/Home';
+import { Reviews } from './pages/Reviews';
+import { Articles } from './pages/Articles';
+import { Movies } from './pages/Movies';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,12 +18,36 @@ const App = () => {
     <>
       <div className="container">
         <Menu />
-        <main>
-          <Home />
-        </main>
+        <main>{location.pathname === '/' ? <Home /> : <Outlet />}</main>
       </div>
     </>
   );
 };
-
-createRoot(document.querySelector('#app')).render(<App />);
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    // errorElement: <ErrorPage />,
+    children: [
+      {
+        path: 'home',
+        element: <Home />,
+      },
+      {
+        path: 'reviews',
+        element: <Reviews />,
+      },
+      {
+        path: 'articles',
+        element: <Articles />,
+      },
+      {
+        path: 'movies',
+        element: <Movies />,
+      },
+    ],
+  },
+]);
+createRoot(document.querySelector('#app')).render(
+  <RouterProvider router={router} />,
+);
