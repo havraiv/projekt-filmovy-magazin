@@ -3,6 +3,12 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 import { Menu } from './components/Menu';
 import { Home } from './pages/Home';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Link,
+  Outlet,
+} from 'react-router-dom';
 
 const App = () => {
   return (
