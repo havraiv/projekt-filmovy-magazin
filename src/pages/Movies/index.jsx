@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import { MovieList } from '../MovieList';
+import { Outlet } from 'react-router';
 
 export const Movies = () => {
   return (
@@ -9,6 +10,7 @@ export const Movies = () => {
 
       <div className="movies-container">
         <MovieList />
+        <Outlet />
       </div>
     </div>
   );

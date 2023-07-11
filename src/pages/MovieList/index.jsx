@@ -8,7 +8,7 @@ export const MovieList = () => {
     <nav className="movie-list">
       {movies.map((movie) => {
         return (
-          <Link to={`/movie/${movie.id}`} key={movie.id}>
+          <Link to={`/movies/${movie.id}`} key={movie.id}>
             {movie.title}
           </Link>
         );

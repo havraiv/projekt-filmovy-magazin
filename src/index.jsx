@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { Reviews } from './pages/Reviews';
 import { Articles } from './pages/Articles';
 import { Movies } from './pages/Movies';
+import { Movie } from './pages/Movie';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -45,6 +46,12 @@ const router = createBrowserRouter([
       {
         path: 'movies',
         element: <Movies />,
+        children: [
+          {
+            path: '/movies/:id',
+            element: <Movie />,
+          },
+        ],
       },
     ],
   },
