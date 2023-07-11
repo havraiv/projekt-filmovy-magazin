@@ -6,9 +6,15 @@ import { Home } from './pages/Home';
 import { Reviews } from './pages/Reviews';
 import { Articles } from './pages/Articles';
 import { Movies } from './pages/Movies';
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  useLocation,
+} from 'react-router-dom';
 
 const App = () => {
+  const location = useLocation();
   return (
     <>
       <div className="container">
