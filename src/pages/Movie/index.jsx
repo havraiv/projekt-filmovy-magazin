@@ -8,7 +8,7 @@ export const Movie = () => {
 
   return (
     <div className="movie">
-      {/* <img src="https://github.com/Czechitas-podklady-WEB/projekt-filmovy-magazin/raw/main/html-vzor/images/pulp-fiction.jpg" alt="Pulp Fiction"> */}
+      <img src={`${moviesData.poster}`} alt={`${moviesData.title}`} />
 
       <h2>{moviesData.title}</h2>
 
