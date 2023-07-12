@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import movies from '../../movie-database';
 import './style.css';
 
@@ -8,9 +8,13 @@ export const MovieList = () => {
     <nav className="movie-list">
       {movies.map((movie) => {
         return (
-          <Link to={`/movies/${movie.id}`} key={movie.id}>
+          <NavLink
+            to={`/movies/${movie.id}`}
+            key={movie.id}
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
             {movie.title}
-          </Link>
+          </NavLink>
         );
       })}
     </nav>
