@@ -7,6 +7,7 @@ import { Reviews } from './pages/Reviews';
 import { Articles } from './pages/Articles';
 import { Movies } from './pages/Movies';
 import { Movie } from './pages/Movie';
+import { ErrorPage } from './pages/ErrorPage';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: 'home',
